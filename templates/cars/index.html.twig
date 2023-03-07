@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CarsController!{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ asset('css/home.css') }}">
+<nav>
+    <a href="/home">
+        <img src="../images/logoToyota.png">
+    </a>
+    <a href="/admin" >Login Admin</a>
+    <a href="/pilotes">Inscription Pilote</a>
+</nav>
+<div class="example-wrapper">
+    CARS
+
+    <div>
+{{ form(form) }}
+</div>
+</div>
+{% endblock %}

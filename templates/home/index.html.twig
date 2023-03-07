@@ -1,0 +1,41 @@
+{% block head %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('../css/home.css') }}">
+{% endblock %}
+{% endblock %}
+
+
+
+{% block body %}
+<title>Accueil</title>
+
+<nav>
+    <a href="/home">
+        <img src="../images/logoDodge.png">
+    </a>
+    {# <a href="/race">Prochaine Course</a> #}
+    <a class="nav_text" href="/admin" >Login Admin</a>
+    <a class="nav_text" href="/pilotes">Inscription Pilote</a>
+</nav>
+
+<div class="mainDiv">
+<div>
+<h2 class="pilote_list">Liste des pilotes participants</h2>
+    <ul class="pilote_list">
+        {% for pilote in pilotes %}
+        <p>{{ pilote.nickname }}</p>
+        {% endfor %}
+    </ul>
+</div>
+<div>
+<h2 class="cars_list">Liste des voitures participantes</h2>
+    <ul class="cars_list">
+        {% for car in cars %}
+        <p>{{ car.brand }} - {{ car.model }}</p>
+        {% endfor %}
+    </ul>
+</div>
+<div></div>
+</div>
+{% endblock %}
+
